@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salgado</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #pergunta{
+            display: flex;
+            width: 100vw;
+            height: 15vh;
+            background-color: brown;
+            justify-content: center;
+            align-items: center;
+            gap: 3vw;
+
+        }
+        #pergunta > img{
+            height: 100%;
+
+        }
+        #pergunta > h1{
+            font-size: 3.5rem;
+        }
+        @media only screen and (max-width: 700px) {
+            #pergunta > h1{
+            font-size: 2rem;
+            }
+            #pergunta > img{
+            height: 50%;
+
+            }
+            
+        }
+        #respostas{
+            background-color: red;
+            width: 100vw;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5vh;
+            
+        }
+        .resposta{
+            border: solid 3px black;
+        }
+        .resposta.coxinha{
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="pergunta">
+        <img src="assets/imagens/hamburguer.png" alt="">
+        <h1>Escolha seu Salgado</h1>
+    </div>
+    <div id="respostas">
+        <label><input type="radio" class="pergunta" name="p1" value="coxinha">Coxinha</label><br>
+        <label><input type="radio" class="pergunta" name="p1" value="risoles">Risoles</label><br>
+        <label><input type="radio" class="pergunta" name="p1" value="paodebatata">Pão de batata</label><br>
+        <label><input type="radio" class="pergunta" name="p1" value="esfirra">Esfirra</label><br>
+        <label><input type="radio" class="pergunta" name="p1" value="paodequeijo">Pão de Queijo</label>
+    </div>
+    <script>
+        document.getElementById("btn").onclick = function(){
+            var contadores = {
+                "coxinha": 0,
+                "risoles": 0,
+                "paodebatata": 0,
+                "esfirra": 0,
+                "paodequeijo": 0
+            };
+
+            var radio = document.getElementsByClassName("pergunta");
+            var totalCoxinha = 0;
+            var totalRisoles = 0;
+            var totalPaodeBatata = 0;
+            var totalEsfirra = 0;
+            var totalPaodeQueijo = 0
+
+            for(var i = 0; i < radio.length; i++){
+                if(radio[i].checked){
+                    if(radio[i].value === "coxinha")
+                }
+            }
+        }
+    </script>
+</body>
+</html>
